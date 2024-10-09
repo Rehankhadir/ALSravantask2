@@ -1,0 +1,164 @@
+<header>
+  <img src="../assets/icon.PNG" alt="icon" />
+  <div class="header-container">
+    <img src="../assets/home.PNG" alt="home" />
+    <img src="../assets/analytics.PNG" alt="analicts" /><span>Analytics</span>
+    <img src="../assets/platform.PNG" alt="platform" /><span
+      >Platform Customization</span
+    >
+  </div>
+  <div class="header-container right">
+    <span
+      ><input class="search" type="text" placeholder="Search here..." />
+      <i class="pi pi-search" style="font-size: 1.5rem"></i
+    ></span>
+    <span>Sravan</span>
+    <span><img src="../assets/sravan.jpg" alt="profile" /></span>
+  </div>
+</header>
+
+<div style="background-color: rgba(128, 118, 118, 0.062)">
+  <div class="dashboard-container">
+    <!-- Welcome Banner -->
+    <!-- <div class="uiroll-img mt-3">
+    <img src="../assets/uiroll_background.PNG" alt="background image">
+  </div> -->
+    <div class="onboarding-container">
+      <div class="welcome-banner">
+        <h1>Welcome</h1>
+        <h2>to Onboarding Tool !</h2>
+      </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats-container">
+      <div class="card">
+        <div class="icon red-bg"><img src="../assets/image1.PNG" alt="image1" /></div>
+        <div class="card-content">
+          <span class="text-card">Onboarding This Month</span>
+          <h3 class="text-header" style="margin-left: -30px;">15</h3> 
+          <img src="../assets/increase.PNG" alt="increase" class="increaseimg">
+          <span class="growth">+45%</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon teal-bg"><img src="../assets/image2.PNG" alt="image2" /></div>
+        <div class="card-content">
+          <span class="text-card1">Total Onboarding This Year</span>
+          <h3 class="text-header1" style="margin-left: -30px;">135</h3>
+          <img src="../assets/increase.PNG" alt="increase" class="increaseimg">
+
+          <span class="growth">+16%</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon orange-bg"><img src="../assets/image3.PNG" alt="image3" /></div>
+        <div class="card-content">
+          <span class="text-cardProgress">Onboarding Journeys In Progress</span>
+          <h3 class="text-header2"style="margin-left: -50px;">5</h3>
+          <img src="../assets/decrease.PNG" alt="increase" class="increaseimg">
+
+          <span class="growth">-10%</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon purple-bg"><img src="../assets/image4.PNG" alt="image4" /></div>
+        <div class="card-content">
+          <span class="text-cardEvaluation">Avg Onboarding Evaluation Score</span>
+          <h3 class="text-header3" style="margin-left: -30px;">8.5</h3>
+          <img src="../assets/increase.PNG" alt="increase" class="increaseimg">
+
+          <span class="growth">+5%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <div class="onboarding-left content">
+        <h1>Do not know where to start?</h1>
+        <p>
+          Take a quick tour of our onboarding tool to know how to onboard an
+          employee
+        </p>
+        <button class="btn-primary">Start a tour &rarr;</button>
+        <img src="../assets/cartoon.PNG" alt="cartoon" class="imagecartoon">
+      </div>
+
+      <div class="onboarding-right sidebar">
+        <button class="btn-primary">View Dashboard &rarr;</button>
+        <button class="btn-green">Add New Employee &rarr;</button>
+        <button class="btn-secondary">Customization &rarr;</button>
+      </div>
+    </div>
+  </div>
+  <div class="table">
+     <h5 style="font-size: 17px;"><b>Check on UIROLL onboarding employees</b></h5>
+      <span>
+        <i class="pi pi-search" style="font-size: 1.5rem"></i>
+        <input class="search" type="text" placeholder="Search here..." />
+      </span>
+
+      <span class="float-end">
+        <i class="pi pi-upload" style="font-size: 1rem"></i> &nbsp;
+        <span>Export</span>
+      </span>
+
+      <span class="float-end ml-2">
+        <i class="pi pi-filter" style="font-size: 1rem"></i> &nbsp;
+        <span>Filter</span>
+      </span>
+      <div class="d-flex">
+        <ul class="ul-list">
+          <li>All</li>
+          <li>New Hires</li>
+          <li>Transporting Employees</li>
+          <li>Returning Employees</li>
+          <li>External</li>
+        </ul>
+      </div>
+      
+    <div class="card">
+      <p-table 
+          [value]="products" 
+          [(selection)]="selectedProducts" 
+          dataKey="code" 
+          [tableStyle]="{'min-width': '50rem'}"
+          sortMode="multiple">
+              <ng-template pTemplate="header">
+                  <tr>
+                      <th style="width: 2rem"><p-tableHeaderCheckbox /></th>
+                      <th pSortableColumn="code" style="width:20%">
+                        Code <p-sortIcon field="code" />
+                    </th>
+                    <th pSortableColumn="name" style="width:20%">
+                        Name <p-sortIcon field="name" />
+                    </th>
+                    <th pSortableColumn="category" style="width:20%">
+                        Category <p-sortIcon field="category" />
+                    </th>
+                    <th pSortableColumn="quantity" style="width:20%">
+                        Quantity <p-sortIcon field="quantity" />
+                    </th>
+                  </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                  <tr>
+                      <td>
+                          <p-tableCheckbox [value]="product" />
+                      </td>
+                      <td>{{product.code}}</td>
+                      <td>{{product.name}}</td>
+                      <td>{{product.category}}</td>
+                      <td>{{product.quantity}}</td>
+                  </tr>
+              </ng-template>
+      </p-table>
+  </div>
+  </div>
+</div>
+
+
